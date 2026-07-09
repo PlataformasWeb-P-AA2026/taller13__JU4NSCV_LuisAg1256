@@ -1,0 +1,26 @@
+{% extends "master.html" %}
+
+{% block content %}
+<section class="form-section">
+    <h2>Registrar Nuevo Edificio</h2>
+
+    <form method="POST" action="{{ url_for('crear_edificio') }}">
+        <label for="nombre">Nombre del Edificio</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Ej. Edificio Torres Gemelas" required>
+
+        <label for="direccion">Dirección</label>
+        <input type="text" id="direccion" name="direccion" placeholder="Ej. Av. Principal 123" required>
+
+        <label for="ciudad">Ciudad</label>
+        <input type="text" id="ciudad" name="ciudad" placeholder="Ej. Quito" required>
+
+        <label for="tipo">Tipo de Edificio</label>
+        <select id="tipo" name="tipo" required>
+            <option value="residencial">Residencial</option>
+            <option value="comercial">Comercial</option>
+        </select>
+
+        <button type="submit">Guardar Edificio</button>
+    </form>
+</section>
+{% endblock %}

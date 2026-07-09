@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Taller 13 - Edificios y Departamentos</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+
+  <header class="header">
+    <div class="logo">UTPL</div>
+
+    <nav class="menu">
+      <a href="{{ url_for('index') }}">Inicio</a>
+      <a href="{{ url_for('los_edificios') }}">Edificios</a>
+      <a href="{{ url_for('los_departamentos') }}">Departamentos</a>
+      <a href="{{ url_for('crear_edificio') }}">Crear Edificio</a>
+      <a href="{{ url_for('crear_departamento') }}">Crear Dept.</a>
+    </nav>
+  </header>
+
+  <main>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        <ul style="list-style: none; padding: 0;">
+        {% for category, message in messages %}
+          <li style="padding: 10px; margin-bottom: 10px; border-radius: 5px; background: #e0f2f1; color: #00695c;">
+              {{ message }}
+          </li>
+        {% endfor %}
+        </ul>
+      {% endif %}
+    {% endwith %}
+
+    {% block content %}
+    {% endblock %}
+  </main>
+
+  <footer>
+    <p>© 2026 UTPL. Proyecto de Edificios y Departamentos.</p>
+  </footer>
+
+</body>
+</html>

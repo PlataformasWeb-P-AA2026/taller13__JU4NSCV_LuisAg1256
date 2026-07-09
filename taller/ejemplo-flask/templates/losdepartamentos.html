@@ -1,0 +1,29 @@
+{% extends "master.html" %}
+
+{% block content %}
+<section class="table-section">
+    <h2>Listado de Departamentos</h2>
+    <p style="margin-bottom: 20px;">Número de departamentos registrados: <span class="yellow">{{ numero_departamentos }}</span></p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Propietario</th>
+                <th>Costo</th>
+                <th>Número de Cuartos</th>
+                <th>Edificio (Referencia)</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for d in departamentos %}
+            <tr>
+                <td>{{ d.nombre_propietario }}</td>
+                <td><span class="yellow">${{ d.costo }}</span></td>
+                <td>{{ d.num_cuartos }}</td>
+                <td>{{ d.edificio }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</section>
+{% endblock %}
