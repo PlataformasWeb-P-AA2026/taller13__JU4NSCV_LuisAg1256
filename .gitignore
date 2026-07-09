@@ -1,2 +1,3 @@
-.entorno/*
-__pycache__/*
+entorno/
+__pycache__/  
+poblar_datos.py
