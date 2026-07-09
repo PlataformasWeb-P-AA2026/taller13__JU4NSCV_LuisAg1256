@@ -56,11 +56,18 @@ Nota: Un departamento pertenece a un edificio
 ### Tecnologías y herramientas:
 
 - Base de datos Sqlite / Postgres (agregar en el readme, evidencias de las tablas en ambas BD)
+  
+#### Postgres
 
 Postgres informacion de departamentos y de edificios:
 <img width="1920" height="1200" alt="cap1" src="https://github.com/user-attachments/assets/4ff2782b-182e-44dc-9d3c-23295af5adb6" />
 
 <img width="1920" height="1200" alt="cap2" src="https://github.com/user-attachments/assets/55ab89e3-0193-4b8a-9060-ac5ddcbcfa9c" />
+
+#### SqliteBrowser
+<img width="1920" height="1200" alt="cap3" src="https://github.com/user-attachments/assets/91ee13de-02a6-4e01-88c6-8b2e2e78416b" />
+
+<img width="1920" height="1200" alt="cap4" src="https://github.com/user-attachments/assets/69f43ae8-458b-42e5-bf4f-da364676563a" />
 
 - Lenguaje Python
 - Framework Django
